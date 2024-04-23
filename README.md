@@ -83,15 +83,10 @@ The Gateway Client URL defaults to http://localhost:3000, if not provided.
 The name of module is the name of the existing module in which the changes should be stored. It will not create one. You can create a custom module using the generateModule script.
 
 
-**Now some Technical terms:**
-
-**Definitions::**
-  
+**Now some technical terms & definitions:**
 **The stage directory**
 Like many JavaScript applications, Active Workspace uses npm to manage dependencies and other build tooling. The primary files related to npm are the package.json file and the node_modules folder.
   
-
-
 Following is a description of several of the important directories for Active Workspace customization. Not all directories present in the environment are shown.  
   
 ![image](https://user-images.githubusercontent.com/76819369/130231784-2294346b-6a10-4c09-aa82-f442d74945db.png)
@@ -101,9 +96,9 @@ This is the base directory for Active Workspace customization. It is located in 
 
 _repo_
 This directory contains the declarative source code for Active Workspace, and is required when building the application.
-
 You can use the declarative source definitions in this directory for reference; all of the installed OOTB kits are located here in their respective directories.
-out
+
+_out_
 This is where the local build can be found.
 
 _site_
@@ -117,7 +112,6 @@ Contains the icons used by the Active Workspace UI are located here. If you want
 
 _mysamplemodule_
 This is an example custom module that you might create. If you use the generateModule script, this is the module that is automatically created if you don't use another one. You may have as few or as many modules as you need to organize your content, but each module must be registered in the main kit.json file, which is located in the solution directory.
-
 Each module will have its own module.json file and must conform to the declarative file and directory structure.
 
 _solution_
