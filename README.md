@@ -125,7 +125,10 @@ _solution_
 --------------
 In this directory, you will find the Active Workspace kit.json file and all of the workspace definitions. Your custom modules must be registered in this file for the build script to find and process them. When you use the generateModule script to create your module, it will register your custom module in the kit.json for you.
 
-Using Action Builder
+
+
+## Using Action Builder
+--------------
 
 Use the Actions page of Command Builder or Panel Builder to define their behavior. If you make any changes, select Save Action Flow  to save your changes.
 
