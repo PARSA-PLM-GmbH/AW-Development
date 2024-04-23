@@ -92,32 +92,41 @@ Following is a description of several of the important directories for Active Wo
 ![image](https://user-images.githubusercontent.com/76819369/130231784-2294346b-6a10-4c09-aa82-f442d74945db.png)
 
 _stage_
+--------------
 This is the base directory for Active Workspace customization. It is located in TC_ROOT\aws2. This is the root of the development environment. Open this folder with your JavaScript project editor.
 
 _repo_
+--------------
 This directory contains the declarative source code for Active Workspace, and is required when building the application.
 You can use the declarative source definitions in this directory for reference; all of the installed OOTB kits are located here in their respective directories.
 
 _out_
+--------------
 This is where the local build can be found.
 
 _site_
+--------------
 This directory is analogous to a WAR file. It is a live application web site which can be served by the gateway, if you configure your gateway to view your local site. Doing this ignores the normal site, which is stored in the file repository.
 
 _src_
+--------------
 The files and directories located here are for your customizations. They are pre-populated with actual source code and resources that are built along with the contents of the repo directory. The src directory contains the following directories:
 
 _image_
+--------------
 Contains the icons used by the Active Workspace UI are located here. If you want to add custom icons for your modules, place them in this directory. Follow the file and naming conventions for icons as specified in the UI Pattern Library, located on Support Center.
 
 _mysamplemodule_
+--------------
 This is an example custom module that you might create. If you use the generateModule script, this is the module that is automatically created if you don't use another one. You may have as few or as many modules as you need to organize your content, but each module must be registered in the main kit.json file, which is located in the solution directory.
 Each module will have its own module.json file and must conform to the declarative file and directory structure.
 
 _solution_
+--------------
 In this directory, you will find the Active Workspace kit.json file and all of the workspace definitions. Your custom modules must be registered in this file for the build script to find and process them. When you use the generateModule script to create your module, it will register your custom module in the kit.json for you.
 
 Using Action Builder
+
 Use the Actions page of Command Builder or Panel Builder to define their behavior. If you make any changes, select Save Action Flow  to save your changes.
 
 The Actions panel
