@@ -53,31 +53,31 @@ To create custom Active Workspace components, you must work within an environmen
 initEnv.cmd
 In a Windows environment, run this script to configure the command-line environment variables necessary for Active Workspace development.
 
-awbuild
+```awbuild```
 This script (awbuild.cmd or awbuild.sh) performs both npm run build and npm run publish. It also initializes the command-line environment.
 
-npm run generateModule
+```npm run generateModule```
 This script assists you in creating boilerplate files and directories for individual components. This script does not require any arguments. If you do not provide any, it prompts you to enter the information it requires.
 
-npm run audit
+```npm run audit```
 This script checks your declarative definitions against the stated schema version. It reports any errors it encounters, which you must fix before continuing. The current schema file is available in the UI Pattern Library on Support Center.
 
 For example, if a view model file contains "schemaVersion" : "1.0.0", then it will be audited versus schema version.1.0.0, even if 1.0.1 were current.
 
-npm run refresh
+```npm run refresh```
 This script quick-builds the Active Workspace application locally from STAGE/src and STAGE/repo into STAGE/out/site.
 
 It does not clean first, nor does it perform minification. If you experience any issues with Active Workspace after making changes and performing a refresh, then perform a build instead.
 
-npm run exportToSrc
+```npm run exportToSrc```
 When you are done making your changes in the UI using Active Architect and you want to commit them, you need to export them into your local source repository.
 
 All of the changes that were made with Command Builder, Panel Builder, and so on, are stored in the declarative artifact service, but any time Active Workspace (the artifact service specifically) is rebuilt, that history and all changes are cleared. Think of exporting back to source as similar to checking in code to source control.
 
 initEnv
-´´´
+```
 npm run exportToSrc  **<Gateway Client URL>** -- --moduleName=<name of module>
-´´´
+```
 The Gateway Client URL defaults to http://localhost:3000, if not provided.
 
 The name of module is the name of the existing module in which the changes should be stored. It will not create one. You can create a custom module using the generateModule script.
@@ -121,10 +121,11 @@ Each module will have its own module.json file and must conform to the declarati
 solution
 In this directory, you will find the Active Workspace kit.json file and all of the workspace definitions. Your custom modules must be registered in this file for the build script to find and process them. When you use the generateModule script to create your module, it will register your custom module in the kit.json for you.
 
- Using Action Builder
+Using Action Builder
 Use the Actions page of Command Builder or Panel Builder to define their behavior. If you make any changes, select Save Action Flow  to save your changes.
 
 The Actions panel
+
 ![image](https://user-images.githubusercontent.com/76819369/130232034-173f4fff-5c33-497d-98d9-85275b737534.png)
 
 Find and select the action you wish to view.
@@ -134,6 +135,7 @@ Use the Actions viewer to scroll and zoom around the action flow. Select an acti
 Use the Action Properties panel to view the various properties of the selected action or operator.
 
 The Action Palette
+
 ![image](https://user-images.githubusercontent.com/76819369/130232060-33bd0e56-52c5-477f-8e18-69a64cfd34f8.png)
 
 Select Toggle Action Palette to display or hide this panel.
@@ -144,6 +146,7 @@ Use Object Activities to define behavior during the action flow. Drag new activi
 
 Adding existing actions
 You can search for and add existing actions to your action flow.
+
 ![image](https://user-images.githubusercontent.com/76819369/130232078-aef76892-839b-4f93-af65-06d101d2ee47.png)
 
 
@@ -152,6 +155,7 @@ Switch to the Existing tab to search for actions.
 Drag an action into the action viewer.
 
 Creating connections
+
 ![image](https://user-images.githubusercontent.com/76819369/130232101-0d17b57f-56b4-4e68-86e6-82c6e1dd1855.png)
 
 Toggle the Enable connection setting to create flow lines between actions.
@@ -159,6 +163,7 @@ Toggle the Enable connection setting to create flow lines between actions.
 Draw connections between a circle of one action to a circle on another action.
 
 By default, a success connection is drawn. You can change it to a failure connection by selecting the connection, and choosing Failure in the CONNECTION PROPERTIES panel.
+
 ![image](https://user-images.githubusercontent.com/76819369/130232124-5e792167-76be-415c-94f7-fabf9db4b134.png)
 
 
@@ -167,17 +172,19 @@ A Success connection is represented by a solid line, while a Failure connection 
 ![image](https://user-images.githubusercontent.com/76819369/130232172-f9f87134-dfb0-4f0e-8314-ac4a22ea88d3.png)
 
 Editing properties
+
 ![image](https://user-images.githubusercontent.com/76819369/130232197-565161a0-ea4c-439f-9f43-1dd6f0031187.png)
 
 Use this panel to view or edit properties for the action selected in the action flow. After making changes, select Update to save the definition.
 
   
   
-  Using Panel Builder
+Using Panel Builder
 Use the Panel Builder canvas to create or modify a panel using drag-and-drop.
 
 Navigating nested panels
 The Panel Builder supports nested panels. To navigate nested panels:
+
   ![image](https://user-images.githubusercontent.com/76819369/130232254-c46e7c0d-0042-4c24-8665-4e0875adf307.png)
   
   The breadcrumb shows you where you are in the nested panel hierarchy. In this example, you are at the top: Awp0ShowCreateObject.
@@ -185,6 +192,7 @@ The Panel Builder supports nested panels. To navigate nested panels:
 The Views area shows you any subpanels that exists. Selecting one will change to that subpanel.
 
 Subpanels are also shown in the main canvas area, and can be selected to change to that subpanel.
+
   ![image](https://user-images.githubusercontent.com/76819369/130232303-83db78c9-606c-4b3d-9871-b2cfb82a380c.png)
 
   
