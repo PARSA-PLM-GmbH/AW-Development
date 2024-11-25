@@ -1,0 +1,12 @@
+{
+  "name": "apscore",
+  "description": "",
+  "modules": [
+    "apscore"
+  ],
+  "version": "6.3.6",
+  "OOTB": true,
+  "soaDeps": [
+    "Fnd0.Soa.ConfigFilterCriteria"
+  ]
+}
